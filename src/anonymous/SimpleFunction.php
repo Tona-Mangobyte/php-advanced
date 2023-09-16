@@ -1,6 +1,6 @@
 <?php
 
-namespace Anonymous\Functions;
+namespace Anonymous;
 
 class SimpleFunction
 {

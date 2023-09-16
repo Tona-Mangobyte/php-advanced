@@ -2,17 +2,45 @@
 
 namespace Tests\Unit;
 
+use Magic\HtmlElement;
+use Magic\SimpleClass;
 use PHPUnit\Framework\TestCase;
-use Advanced\Magic\Foo;
-// require 'Advanced\Magic\Foo';
 
 class MagicMethodsTest extends TestCase
 {
     public function testGetOrSet() {
-        /*$foo = new Foo();
-        echo $foo->bar;
-        $foo->bar = 'test';
-        echo "[$foo->bar]";*/
+
+        $div = new HtmlElement('div');
+        $div->id = 'page';
+        $div->class = 'light';
+        $this->assertEquals('<div id="page" class="light">Hello</div>', $div->html('Hello'));
         $this->assertTrue(true);
+    }
+
+    public function testGetOrSet2() {
+
+        $student = new SimpleClass();
+        $student->name = 'Tona';
+        $student->gender = 'Male';
+        $this->assertEquals('Tona', $student->name);
+        $this->assertEquals('Male', $student->gender);
+    }
+
+    public function testGetOrSet3() {
+
+        $name = function () {
+            return "Tona";
+        };
+        function address() {
+            return "Tona";
+        }
+        $student = new SimpleClass();
+        $student->name = $name;
+        $student->gender = 'Male';
+        $student->{"address"} = 'PP';
+        $isClosure = $student->name instanceof \Closure;
+        $this->assertTrue($isClosure);
+        $this->assertEquals('Male', $student->gender);
+        $this->assertEquals('PP', $student->address);
     }
 }
