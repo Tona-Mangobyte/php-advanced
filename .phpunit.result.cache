@@ -1,1 +1,0 @@
-{"version":1,"defects":{"Tests\\Unit\\AnonymousFunctionTest::testFunc":7,"Tests\\Unit\\MagicMethodsTest::testGetOrSet":8},"times":{"Tests\\Unit\\ExampleTest::testBasicTest":0.004,"Tests\\Unit\\SimpleFunctionTest::testBasicTest":0.006,"Tests\\Unit\\AnonymousFunctionTest::testFunc":0.005,"Tests\\Unit\\MagicMethodsTest::testGetOrSet":0.009}}
