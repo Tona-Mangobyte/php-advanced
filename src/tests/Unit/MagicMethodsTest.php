@@ -4,6 +4,7 @@ namespace Tests\Unit;
 
 use Magic\HtmlElement;
 use Magic\SimpleClass;
+use Magic\User;
 use PHPUnit\Framework\TestCase;
 
 class MagicMethodsTest extends TestCase
@@ -31,9 +32,6 @@ class MagicMethodsTest extends TestCase
         $name = function () {
             return "Tona";
         };
-        function address() {
-            return "Tona";
-        }
         $student = new SimpleClass();
         $student->name = $name;
         $student->gender = 'Male';
@@ -42,5 +40,12 @@ class MagicMethodsTest extends TestCase
         $this->assertTrue($isClosure);
         $this->assertEquals('Male', $student->gender);
         $this->assertEquals('PP', $student->address);
+    }
+
+    public function testGetOrSet4() {
+        $user = new User();
+        $this->assertEquals("John", $user->name);
+        $user->name = "Tona";
+        $this->assertEquals("Tona", $user->name);
     }
 }
