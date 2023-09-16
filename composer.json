@@ -14,7 +14,9 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\": "tests/"
+            "Magic\\": "src/magic/",
+            "Anonymous\\": "src/anonymous/",
+            "Tests\\": "src/tests/"
         }
     }
 }
