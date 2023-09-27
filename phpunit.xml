@@ -7,6 +7,12 @@
         <testsuite name="Unit">
             <directory suffix="Test.php">./tests/Unit</directory>
         </testsuite>
+        <testsuite name="LarConcept">
+            <directory suffix="Test.php">./tests/LarConcept</directory>
+        </testsuite>
+        <testsuite name="Reflection">
+            <directory suffix="Test.php">./tests/Reflection</directory>
+        </testsuite>
     </testsuites>
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">

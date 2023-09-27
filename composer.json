@@ -15,6 +15,7 @@
     "autoload-dev": {
         "psr-4": {
             "Feature\\": "src/feature/",
+            "LarConcept\\": "src/LarConcept",
             "Magic\\": "src/magic/",
             "Anonymous\\": "src/anonymous/",
             "Tests\\": "src/tests/"
